@@ -1,0 +1,30 @@
+import { Meta, Story, Canvas, Props } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { Button } from './button.component';
+
+<Meta
+  title="2021/Button"
+  component={Button}
+/>
+
+# Button
+
+Standard button component. Allows users to take a specific action.
+Typically used in forms and modals.
+
+<Canvas>
+  <Story
+    name="Button"
+    args={{ children: 'Click me!', }}
+  >
+    {args => {
+      return (
+        <Button {...args} />
+      )
+    }}
+  </Story>
+</Canvas>
+
+# Props
+
+<Props of={Button} />

@@ -1,0 +1,55 @@
+{
+  "name": "storybook-repro",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint 'src/**/*.{js,jsx}' 'src/**/*.*.{js,jsx}'",
+    "prettier": "./node_modules/.bin/prettier --write '**/*.*'",
+    "start": "start-storybook -s ./src -p 9001 -c .storybook --no-version-updates"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "@mdx-js/loader": "^1.6.6",
+    "@storybook/addon-a11y": "^6.0.21",
+    "@storybook/addon-actions": "^6.0.21",
+    "@storybook/addon-docs": "^6.0.21",
+    "@storybook/addon-essentials": "^6.0.21",
+    "@storybook/addon-knobs": "^6.0.21",
+    "@storybook/addons": "6.0.21",
+    "@storybook/react": "^v6.0.21",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.2",
+    "babel-plugin-react-docgen": "^4.1.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.8.2",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "lodash.kebabcase": "^4.1.1",
+    "prettier": "1.19.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "storybook-addon-deps": "^2.1.3",
+    "storybook-readme": "^5.0.8",
+    "ts-loader": "^8.3.0",
+    "typescript": "^4.1.6",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.*": "eslint --fix"
+  }
+}
